@@ -28,6 +28,9 @@
     "ng-core-workshop-new-e2e": {
       "tags": [],
       "implicitDependencies": ["ng-core-workshop-new"]
+    },
+    "material": {
+      "tags": []
     }
   }
 }
