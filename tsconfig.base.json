@@ -16,7 +16,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@angular-core-workplace-new/material": ["libs/material/src/index.ts"]
+      "@angular-core-workplace-new/material": ["libs/material/src/index.ts"],
+      "@angular-core-workplace-new/ui-login": ["libs/ui-login/src/index.ts"],
+      "@angular-core-workplace-new/ui-toolbar": [
+        "libs/ui-toolbar/src/index.ts"
+      ],
+      "@angular-core-workplace-new/core-data": ["libs/core-data/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

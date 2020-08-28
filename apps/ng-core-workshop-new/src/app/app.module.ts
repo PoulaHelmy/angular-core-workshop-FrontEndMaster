@@ -6,6 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../../../../libs/material/src/index';
+import { HomeModule } from './home/home.module';
+import { CustomersModule } from './customers/customers.module';
+import { ProjectsModule } from './projects/projects.module';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -13,6 +17,9 @@ import { MaterialModule } from '../../../../libs/material/src/index';
     NoopAnimationsModule,
     AppRoutingModule,
     MaterialModule,
+    HomeModule,
+    ProjectsModule,
+    CustomersModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
