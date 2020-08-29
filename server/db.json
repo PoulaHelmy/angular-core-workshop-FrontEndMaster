@@ -126,20 +126,9 @@
       "customerId": "7"
     },
     {
-      "id": "5",
-      "title": "Project Five",
-      "details": "This is a sample project",
-      "percentComplete": 100,
-      "approved": true,
-      "startDate": null,
-      "targetDate": "2018-10-26T07:00:00.000Z",
-      "completionDate": null,
-      "customerId": "1"
-    },
-    {
-      "id": "2uh7TCh",
-      "title": "Poula Project",
-      "details": "Impedit sit odit t",
+      "id": "sP6KsDm",
+      "title": "Consequatur quis pe",
+      "details": "Mollitia amet a fug",
       "percentComplete": 100,
       "approved": true
     }
