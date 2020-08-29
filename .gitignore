@@ -5,7 +5,7 @@
 /tmp
 /out-tsc
 
-# dependencies
+# dependenciesgit remote add origin https://github.com/PoulaHelmy/angular-core-workshop-FrontEndMaster.git
 /node_modules
 
 # IDEs and editors
