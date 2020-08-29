@@ -34,7 +34,6 @@ export class ProjectsComponent implements OnInit {
   primaryColor='red';
   constructor() {}//end of constructor
   ngOnInit(): void {
-    console.log(this.selectedProject);
   }//end of ngOnInit
   selectProject(project:object){
     this.selectedProject=project;
