@@ -1,35 +1,31 @@
 import { Injectable } from '@angular/core';
-import { Project } from './project';
-
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+const BaseURL='http://localhost:3000/';
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectsService {
-  private projects:Project[] = [
-    {
-      id: '1',
-      title: 'Project One',
-      details: 'This is a sample project',
-      percentComplete: 20,
-      approved: false,
-    },
-    {
-      id: '2',
-      title: 'Project Two',
-      details: 'This is a sample project',
-      percentComplete: 40,
-      approved: false,
-    },
-    {
-      id: '3',
-      title: 'Project Three',
-      details: 'This is a sample project',
-      percentComplete: 100,
-      approved: true,
-    }
-  ];
-  constructor() { }//end of constructor
-  all(): Project[] {
-    return this.projects;
-  }
+  model='projects';
+  constructor(private http:HttpClient) { }//end of constructor
+  getURL(){
+    return `${BaseURL}${this.model}`;
+  }//end of getURL()
+  getURLForID(id){
+    return `${BaseURL}${this.model}/${id}`;
+  }//end of getURLForID()
+  all():Observable<any>{
+    return this.http.get(this.getURL());
+  }//end of all()
+  create(project){
+    return this.http.post(this.getURL(),project);
+  }//end of create()
+  update(project){
+    return this.http.patch(this.getURLForID(project.id),project);
+  }//end of update()
+  delete(projectId){
+    return this.http.delete(this.getURLForID(projectId));
+  }//end of delete()
+
+
 }//end of Class
