@@ -5,4 +5,5 @@ export interface Project {
   details: string,
   percentComplete: number,
   approved: boolean,
+
 }
