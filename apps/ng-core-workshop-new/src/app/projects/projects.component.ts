@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Project, ProjectsService } from '@angular-core-workplace-new/core-data';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -7,34 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
-  projects = [
-    {
-      id: '1',
-      title: 'Project One',
-      details: 'This is a sample project',
-      percentComplete: 20,
-      approved: false,
-    },
-    {
-      id: '2',
-      title: 'Project Two',
-      details: 'This is a sample project',
-      percentComplete: 40,
-      approved: false,
-    },
-    {
-      id: '3',
-      title: 'Project Three',
-      details: 'This is a sample project',
-      percentComplete: 100,
-      approved: true,
-    }
-  ];
+  projects :Project[];
   selectedProject;
   primaryColor='red';
-  constructor() {}//end of constructor
+  constructor(private projectsService:ProjectsService) {}//end of constructor
   ngOnInit(): void {
+    this.getProjects();
   }//end of ngOnInit
+  getProjects(){
+    return this.projects=this.projectsService.all();
+  }//end of getProjects
   selectProject(project:object){
     this.selectedProject=project;
   }//end of selectProject
