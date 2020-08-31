@@ -8,6 +8,8 @@
     "nx": "nx",
     "start": "concurrently \"npm run server\" \"ng serve\"",
     "build": "ng build",
+    "build:app1": "npm --prefix ng-core-workshop-new run build",
+    "build:app2": "npm --prefix new-app run build",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
