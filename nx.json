@@ -18,12 +18,7 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "accessToken": "ZThjOTdkZjItNjliZi00NGIwLWFmOTYtMDNhZDllOTkwMGQzfHJlYWQtd3JpdGU=",
-        "cacheableOperations": [
-          "build",
-          "test",
-          "lint",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
@@ -35,9 +30,7 @@
     },
     "ng-core-workshop-new-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "ng-core-workshop-new"
-      ]
+      "implicitDependencies": ["ng-core-workshop-new"]
     },
     "material": {
       "tags": []
@@ -50,6 +43,13 @@
     },
     "core-data": {
       "tags": []
+    },
+    "new-app": {
+      "tags": []
+    },
+    "new-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["new-app"]
     }
   }
 }
